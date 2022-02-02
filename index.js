@@ -26,7 +26,8 @@ const express = require("express"),
 
 app
 .use(express.json())
-.use(express.urlencoded({ extended: false }));
+.use(express.urlencoded({ extended: false }))
+.use(express.static("images"))
 
 app.get("/", (req, res) => res.json({ status: false, message: "This is not for you." }));
 
