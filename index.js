@@ -48,7 +48,7 @@ app.post(`/download`, checkAdmin, async (req, res) => {
         url: url.href, dest 
     })
     .then(() => {
-        console.log(`[${new Date().toLocaleString("en-US", { timeZone: "America/Los_Angeles" })}]: Added file to ${dest}`)
+        console.log(`[${new Date().toLocaleString("en-US", { timeZone: "America/Los_Angeles" })}]: Added file to ${folder}/${name}`)
         return res.json({ 
           status: true, 
           message: `Done, it's been downloaded!` 
